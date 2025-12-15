@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: keynote-service
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/keynote_db?createDatabaseIfNotExist=true
+    username: root
+    password: Glsid@2025
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  cloud:
+    config:
+      enabled: false
+    discovery:
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+        defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8081
+

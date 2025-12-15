@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: "file:///home/soufiane/Documents/ENSET/s5/distibuted systems/conference-keynotes-microservices/config-repo"
+
+server:
+  port: 8888
